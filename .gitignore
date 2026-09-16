@@ -1,0 +1,13 @@
+build/
+.Xil/
+*.jou
+*.log
+*.str
+*.vcd
+*.cf
+*.o
+*.pb
+vivado*.backup.*
+clockInfo.txt
+dfx_runtime.txt
+__pycache__/
