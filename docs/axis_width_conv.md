@@ -92,9 +92,9 @@ the testbench outside this exercise.
   deasserted synchronously. `rst_n` here is synchronous in both directions,
   which is the usual choice on an FPGA and is a restriction rather than an
   extension.
-- `s_tready` during reset. AMBA requires `tvalid` low during reset and only
-  recommends `tready` low. This specification requires both, and the checker
-  enforces it as a protocol error. That is stricter than AMBA on purpose: a
+- `s_tready` during reset. AMBA requires `tvalid` low during reset and leaves
+  every other signal free. This specification also requires `s_tready` low,
+  and the checker enforces it as a protocol error. That is stricter than AMBA on purpose: a
   checked exercise needs rules with one reading.
 - Combinational `s_tready`. Allowed above, and allowed by AMBA, which does not
   forbid a path between interfaces. It costs a `tready` path that crosses the
