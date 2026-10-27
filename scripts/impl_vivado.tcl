@@ -4,7 +4,7 @@
 
 # Vivado batch flow for axis_width_conv: synthesis, implementation, timing.
 #
-#   vivado -mode batch -source scripts/impl.tcl -tclargs sv     (or vhdl)
+#   vivado -mode batch -source scripts/impl_vivado.tcl -tclargs sv     (or vhdl)
 #
 # Runs out of context so no pins are needed. Prints LATCHES, WNS, WHS and
 # TIMING MET or TIMING FAILED, and exits non zero on failure. A latch is a

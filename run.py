@@ -329,7 +329,7 @@ def cmd_impl(hdl, extra):
     ensure_build()
     log = os.path.join(BUILD, "impl.log")
     rc = run([tool("vivado"), "-mode", "batch", "-log", log, "-journal", os.path.join(BUILD, "impl.jou"),
-              "-source", "scripts/impl.tcl", "-tclargs", hdl] + extra)
+              "-source", "scripts/impl_vivado.tcl", "-tclargs", hdl] + extra)
     log_text = read_log("impl.log")
     latches = re.search(r"^LATCHES: (\d+)$", log_text, re.M)
     if latches is None:
@@ -409,7 +409,7 @@ TRUSTED = [
     "tb/ref_model.sv", "tb/ref_model.vhd",
     "tb/tb_top.sv", "tb/tb_top.vhd",
     "tb/fault.sv", "tb/fault.vhd",
-    "run.py", "scripts/impl.tcl", "scripts/acceptance.py",
+    "run.py", "scripts/impl_vivado.tcl", "scripts/acceptance.py",
     "docs/axis_width_conv.md",
     "constraints/axis_width_conv.xdc",
 ]

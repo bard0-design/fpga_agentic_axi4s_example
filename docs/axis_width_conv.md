@@ -105,7 +105,7 @@ the testbench outside this exercise.
 ## Target
 
 The block must meet timing on the project clock in `constraints/axis_width_conv.xdc`
-on the part named in `scripts/impl.tcl`.
+on the part named in `scripts/impl_vivado.tcl`.
 
 ---
 

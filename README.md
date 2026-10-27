@@ -40,7 +40,7 @@ tb/ref_model.*                  expected output, written from the spec
 tb/checker.*                    data check, handshake rules, functional coverage
 tb/fault.*                      optional interface faults, used by the acceptance suite
 constraints/axis_width_conv.xdc the project clock
-scripts/impl.tcl                Vivado batch flow: synthesis, implementation, timing
+scripts/impl_vivado.tcl         Vivado batch flow: synthesis, implementation, timing
 scripts/acceptance.py           checks that the testbench still catches what it claims
 run.py                          lint, sim, cov, synth, impl, clean
 ```
@@ -416,7 +416,7 @@ carries no input or output delay budget, so it says nothing about the
 combinational `m_tready` to `s_tready` path once the block sits between two
 others. Constraining the interface is a separate exercise and this repository
 does not attempt it.
-Change the part in `scripts/impl.tcl` and the period in
+Change the part in `scripts/impl_vivado.tcl` and the period in
 `constraints/axis_width_conv.xdc` if you want a different target; nothing else
 depends on them.
 
